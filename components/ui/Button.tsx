@@ -1,10 +1,12 @@
 import type { ButtonHTMLAttributes, ReactNode } from "react";
 
 type ButtonVariant = "primary" | "outline" | "ghost";
+type ButtonSize = "default" | "compact";
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   children: ReactNode;
   variant?: ButtonVariant;
+  size?: ButtonSize;
 };
 
 const variantStyles: Record<ButtonVariant, string> = {
@@ -15,12 +17,21 @@ const variantStyles: Record<ButtonVariant, string> = {
     "border border-brand-500 bg-transparent text-brand-700 hover:bg-brand-50 focus-visible:ring-brand-500",
 
   ghost:
-    "bg-transparent text-heading hover:bg-surface focus-visible:ring-brand-500",
+    "bg-transparent text-ink hover:bg-surface focus-visible:ring-brand-500",
+};
+
+const sizeStyles: Record<ButtonSize, string> = {
+  default:
+    "h-10 rounded-[7px] px-5 text-sm",
+
+  compact:
+    "h-6 min-w-[74px] rounded-[4px] px-3 text-[8px]",
 };
 
 export default function Button({
   children,
   variant = "primary",
+  size = "default",
   className = "",
   type = "button",
   ...props
@@ -30,8 +41,7 @@ export default function Button({
       type={type}
       className={`
         inline-flex items-center justify-center
-        rounded-md px-5 py-3
-        text-sm font-semibold
+        whitespace-nowrap font-medium
         transition-colors duration-200
         focus-visible:outline-none
         focus-visible:ring-2
@@ -39,6 +49,7 @@ export default function Button({
         disabled:cursor-not-allowed
         disabled:opacity-50
         ${variantStyles[variant]}
+        ${sizeStyles[size]}
         ${className}
       `}
       {...props}
