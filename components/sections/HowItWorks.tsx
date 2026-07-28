@@ -200,8 +200,11 @@ export default function HowItWorks() {
         </div>
 
         {/* Mobile button */}
-      <div className="mt-6 flex justify-center md:hidden">
-  <Button variant="outline" size="compact" className="bg-white">
+     <div className="mt-6 flex justify-center md:hidden">
+  <Button
+    variant="outline"
+    size="compact"
+  >
     Learn More
   </Button>
 </div>
