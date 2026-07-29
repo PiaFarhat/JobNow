@@ -4,7 +4,7 @@ import Container from "@/components/layout/Container";
 export default function RegisterCta() {
   return (
     <section className="relative bg-[#fbfbfb] pt-16 lg:pt-24">
-      {/* Creates the green overlap behind the CTA */}
+      {/* Green footer overlap behind the CTA */}
       <div
         aria-hidden="true"
         className="
@@ -23,8 +23,10 @@ export default function RegisterCta() {
             rounded-[6px] bg-[#004438]
             px-5 text-center
 
-            lg:h-[322px] lg:max-w-[1240px]
-            lg:rounded-[18px] lg:px-12
+            lg:h-[322px]
+            lg:max-w-[1240px]
+            lg:rounded-[18px]
+            lg:px-12
           "
         >
           <h2
@@ -44,8 +46,10 @@ export default function RegisterCta() {
               text-[11px] leading-[1.45]
               text-white/65
 
-              lg:mt-7 lg:max-w-[690px]
-              lg:text-[19px] lg:leading-[1.45]
+              lg:mt-7
+              lg:max-w-[690px]
+              lg:text-[19px]
+              lg:leading-[1.45]
             "
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis
@@ -56,14 +60,23 @@ export default function RegisterCta() {
             variant="outline"
             size="tiny"
             className="
-              mt-3 border-white bg-transparent
-              text-white shadow-none
-              hover:bg-white hover:text-[#004438]
+              mt-3
+              border-white/70
+              bg-transparent
+              text-white
+              shadow-none
+
+              hover:border-white
+              hover:bg-white/10
+              hover:text-white
+              hover:shadow-[0_4px_14px_rgba(255,255,255,0.12)]
 
               lg:mt-7
-              lg:h-[62px] lg:min-w-[190px]
+              lg:h-[62px]
+              lg:min-w-[190px]
               lg:rounded-[8px]
-              lg:px-7 lg:text-[18px]
+              lg:px-7
+              lg:text-[18px]
             "
           >
             Register Now

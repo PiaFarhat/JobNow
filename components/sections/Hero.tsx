@@ -1,5 +1,6 @@
 import Container from "@/components/layout/Container";
 import HeroDecorations from "@/components/sections/HeroDecorations";
+import HeroMobileDecorations from "@/components/sections/HeroMobileDecorations";
 import HeroSearchForm from "@/components/sections/HeroSearchForm";
 
 export default function Hero() {
@@ -8,7 +9,13 @@ export default function Hero() {
       {/* Desktop green side panel */}
       <div
         aria-hidden="true"
-        className="absolute inset-y-0 right-0 hidden w-[42%] rounded-bl-[64px] bg-brand-500 lg:block"
+        className="
+          absolute inset-y-0 right-0
+          hidden w-[42%]
+          rounded-bl-[64px]
+          bg-brand-500
+          lg:block
+        "
       >
         <HeroDecorations />
       </div>
@@ -16,12 +23,37 @@ export default function Hero() {
       {/* Hero text and search content */}
       <Container className="relative">
         <div className="lg:grid lg:min-h-[693px] lg:grid-cols-[58%_42%] lg:items-start">
-          <div className="pb-[56px] pt-[98px] text-center lg:pb-0 lg:pt-[195px] lg:text-left">
-            <h1 className="mx-auto max-w-[330px] text-[24px] font-bold leading-[1.2] tracking-[-0.03em] text-ink lg:mx-0 lg:max-w-[560px] lg:text-[54px] lg:leading-[1.15]">
+          <div className="pb-10 pt-[98px] text-center lg:pb-0 lg:pt-[195px] lg:text-left">
+            <h1
+              className="
+                mx-auto max-w-[330px]
+                text-[24px] font-bold
+                leading-[1.2] tracking-[-0.03em]
+                text-ink
+
+                lg:mx-0
+                lg:max-w-[560px]
+                lg:text-[54px]
+                lg:leading-[1.15]
+              "
+            >
               Search, Find, &amp; Apply
             </h1>
 
-            <p className="mx-auto mt-[18px] max-w-[265px] text-[8px] leading-[1.45] text-ink lg:mx-0 lg:mt-6 lg:max-w-[580px] lg:text-base lg:leading-7 lg:text-body">
+            <p
+              className="
+                mx-auto mt-[18px]
+                max-w-[280px]
+                text-xs leading-[1.6]
+                text-body
+
+                lg:mx-0
+                lg:mt-6
+                lg:max-w-[580px]
+                lg:text-base
+                lg:leading-7
+              "
+            >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis
               lacus non orci euismod vestibulum vitae ut ex. Quisque ut arcu at
               lectus tristique auctor sit amet at turpis.
@@ -30,12 +62,26 @@ export default function Hero() {
             <HeroSearchForm />
           </div>
 
+          {/* Empty desktop column occupied visually by green panel */}
           <div
             aria-hidden="true"
             className="hidden min-h-[693px] lg:block"
           />
         </div>
       </Container>
+
+      {/* Mobile green animation panel */}
+      <div
+        className="
+          relative h-[230px] w-full
+          overflow-hidden
+          rounded-t-[28px]
+          bg-brand-500
+          lg:hidden
+        "
+      >
+        <HeroMobileDecorations />
+      </div>
     </section>
   );
 }

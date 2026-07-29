@@ -31,4 +31,13 @@ export const recentlyAddedJobs: Job[] = [
     employmentType: "Full Time",
     logo: "xreact",
   },
+  {
+    id: 4,
+    title: "Frontend Developer",
+    company: "Dimension Studio",
+    description: jobDescription,
+    location: "New York, NY",
+    employmentType: "Full Time",
+    logo: "dimension",
+  },
 ];

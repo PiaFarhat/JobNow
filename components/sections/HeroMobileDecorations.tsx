@@ -4,33 +4,48 @@ export default function HeroMobileDecorations() {
   return (
     <div
       aria-hidden="true"
-      className="pointer-events-none absolute inset-0"
+      className="pointer-events-none absolute inset-0 overflow-hidden"
     >
       <Image
         src="/icons/jobnow-decoration-search.svg"
         alt=""
-        width={52}
-        height={52}
+        width={58}
+        height={58}
         draggable={false}
-        className="absolute left-[14%] top-[7%] h-[52px] w-[52px] select-none"
+        className="
+          absolute left-[16%] top-[17%]
+          h-[58px] w-[58px] select-none
+          motion-safe:[animation:hero-float_4.2s_ease-in-out_infinite]
+          motion-safe:[animation-delay:-0.4s]
+        "
       />
 
       <Image
         src="/icons/jobnow-decoration-stats.svg"
         alt=""
-        width={55}
-        height={55}
+        width={62}
+        height={62}
         draggable={false}
-        className="absolute right-[10%] top-[12%] h-[55px] w-[55px] select-none"
+        className="
+          absolute right-[14%] top-[33%]
+          h-[62px] w-[62px] select-none
+          motion-safe:[animation:hero-float_4.8s_ease-in-out_infinite]
+          motion-safe:[animation-delay:-1.6s]
+        "
       />
 
       <Image
         src="/icons/jobnow-decoration-shield.svg"
         alt=""
-        width={54}
-        height={54}
+        width={60}
+        height={60}
         draggable={false}
-        className="absolute left-[11%] top-[34%] h-[54px] w-[54px] select-none"
+        className="
+          absolute bottom-[13%] left-[40%]
+          h-[60px] w-[60px] select-none
+          motion-safe:[animation:hero-float_4.5s_ease-in-out_infinite]
+          motion-safe:[animation-delay:-2.7s]
+        "
       />
     </div>
   );

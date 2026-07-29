@@ -16,6 +16,8 @@ export default function HeroDecorations() {
           absolute left-[15.09%] top-[24.1%]
           h-[84px] w-[84px]
           select-none
+          motion-safe:[animation:hero-float_4.2s_ease-in-out_infinite]
+          motion-safe:[animation-delay:-0.4s]
         "
       />
 
@@ -29,6 +31,8 @@ export default function HeroDecorations() {
           absolute right-[12.6%] top-[41.41%]
           h-[89px] w-[89px]
           select-none
+          motion-safe:[animation:hero-float_4.8s_ease-in-out_infinite]
+          motion-safe:[animation-delay:-1.6s]
         "
       />
 
@@ -42,6 +46,8 @@ export default function HeroDecorations() {
           absolute left-[10.45%] top-[62.48%]
           h-[87px] w-[87px]
           select-none
+          motion-safe:[animation:hero-float_4.5s_ease-in-out_infinite]
+          motion-safe:[animation-delay:-2.7s]
         "
       />
     </div>

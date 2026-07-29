@@ -89,7 +89,8 @@ export default function Testimonials() {
                 items-center justify-center
                 rounded-full bg-[#d9d9d9] text-white
                 transition-all duration-300
-                hover:-translate-y-0.5 hover:bg-[#c8c8c8]
+                hover:-translate-y-0.5
+                hover:bg-brand-500
 
                 lg:h-12 lg:w-12
               "
@@ -117,9 +118,10 @@ export default function Testimonials() {
               className="
                 inline-flex h-7 w-7 cursor-pointer
                 items-center justify-center
-                rounded-full bg-brand-500 text-white
+                rounded-full bg-[#d9d9d9] text-white
                 transition-all duration-300
-                hover:-translate-y-0.5 hover:bg-brand-600
+                hover:-translate-y-0.5
+                hover:bg-brand-500
 
                 lg:h-12 lg:w-12
               "
