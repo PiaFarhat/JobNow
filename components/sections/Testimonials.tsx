@@ -85,7 +85,7 @@ export default function Testimonials() {
               aria-label="Previous testimonial"
               onClick={showPreviousTestimonial}
               className="
-                inline-flex h-7 w-7 cursor-pointer
+                inline-flex h-9 w-9 cursor-pointer
                 items-center justify-center
                 rounded-full bg-[#d9d9d9] text-white
                 transition-all duration-300
@@ -116,7 +116,7 @@ export default function Testimonials() {
               aria-label="Next testimonial"
               onClick={showNextTestimonial}
               className="
-                inline-flex h-7 w-7 cursor-pointer
+                inline-flex h-9 w-9 cursor-pointer
                 items-center justify-center
                 rounded-full bg-[#d9d9d9] text-white
                 transition-all duration-300

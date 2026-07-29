@@ -198,20 +198,29 @@ export default function JobCategoryCard({
 }: JobCategoryCardProps) {
   return (
     <article
+      tabIndex={0}
+      aria-label={`${title}, ${vacancies} job vacancies`}
       className={`
-        flex h-[140px] w-full flex-col overflow-hidden
+        group flex h-[150px] w-full cursor-default flex-col overflow-hidden
         rounded-[10px] px-4 py-4
-        transition-colors duration-200
+        transition-[background-color,color,transform,box-shadow] duration-200
+        focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2
         lg:h-[210px] lg:rounded-[14px]
         lg:px-6 lg:py-6
         ${
           active
             ? "bg-brand-500 text-white"
-            : "bg-white text-ink"
+            : "bg-white text-ink hover:bg-brand-500 hover:text-white focus-visible:bg-brand-500 focus-visible:text-white"
         }
       `}
     >
-      <div className={active ? "text-white" : "text-brand-500"}>
+      <div
+        className={
+          active
+            ? "text-white"
+            : "text-brand-500 group-hover:text-white group-focus-visible:text-white"
+        }
+      >
         <CategoryIconGraphic icon={icon} />
       </div>
 
@@ -228,9 +237,13 @@ export default function JobCategoryCard({
 
       <p
         className={`
-          mt-auto text-[7px] leading-tight
-          lg:text-[10px]
-          ${active ? "text-white/85" : "text-body"}
+          mt-auto text-[10px] leading-tight
+          lg:text-[12px]
+          ${
+            active
+              ? "text-white/85"
+              : "text-body group-hover:text-white/85 group-focus-visible:text-white/85"
+          }
         `}
       >
         {vacancies} Job Vacancy

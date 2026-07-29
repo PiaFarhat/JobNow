@@ -17,7 +17,7 @@ export default function JobCategories() {
       {/* Section heading */}
       <Container>
         <div className="mx-auto text-center">
-          <h2 className="whitespace-nowrap text-[22px] font-bold leading-tight text-ink lg:text-[32px]">
+          <h2 className="text-[22px] font-bold leading-tight text-ink lg:text-[32px]">
             Popular Job Categories
           </h2>
 
@@ -30,23 +30,33 @@ export default function JobCategories() {
       </Container>
 
       {/* Categories carousel */}
-<div className="mt-7 pl-5 sm:pl-8 lg:mt-10 lg:pl-[7%]">
+<Container className="mt-7 lg:mt-10">
+  <div className="w-[calc(100vw-1.25rem)] sm:w-[calc(100vw-2rem)] lg:w-[calc(100vw-2.5rem)] xl:w-[calc(100vw-((100vw-1240px)/2))]">
   <Swiper
-    slidesPerView="auto"
-    spaceBetween={14}
-    grabCursor
-    breakpoints={{
-      1024: {
-        spaceBetween: 20,
-      },
-    }}
-    aria-label="Popular job categories"
-    className="!overflow-visible"
-  >
+  slidesPerView="auto"
+  spaceBetween={12}
+  slidesOffsetAfter={40}
+  grabCursor
+  breakpoints={{
+    640: {
+      spaceBetween: 18,
+      slidesOffsetAfter: 56,
+    },
+    1024: {
+      spaceBetween: 24,
+      slidesOffsetAfter: 96,
+    },
+    1536: {
+      spaceBetween: 24,
+      slidesOffsetAfter: 160,
+    },
+  }}
+  className="!overflow-visible"
+>
     {jobCategories.map((category, index) => (
       <SwiperSlide
         key={category.id}
-        className="!w-[106px] lg:!w-[285px]"
+        className="!w-[clamp(132px,42vw,168px)] sm:!w-[190px] md:!w-[220px] lg:!w-[250px] xl:!w-[285px]"
       >
         <JobCategoryCard
           title={category.title}
@@ -58,6 +68,7 @@ export default function JobCategories() {
     ))}
   </Swiper>
 </div>
+</Container>
 
       {/* View more button */}
       <Container>

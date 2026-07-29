@@ -183,9 +183,10 @@ export default function HowItWorks() {
 
         <div
           className="
-            mx-auto mt-8 grid w-full max-w-[278px]
-            grid-cols-2 gap-x-[15px] gap-y-4
-            sm:max-w-none sm:gap-5
+            mt-8 grid w-full
+            grid-cols-2 items-stretch gap-x-[15px] gap-y-4
+            sm:gap-5
+            md:grid-cols-4
             lg:mt-12 lg:grid-cols-4
           "
         >

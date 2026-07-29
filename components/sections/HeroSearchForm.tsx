@@ -12,12 +12,13 @@ export default function HeroSearchForm() {
     <form
       role="search"
       className="
-        mx-auto mt-[31px] grid w-full max-w-[335px]
-        grid-cols-[minmax(0,132px)_104px_55px]
-        items-center justify-center gap-2
+        mx-auto mt-[31px] grid w-full max-w-[390px]
+        grid-cols-1
+        items-center justify-center gap-2.5
         rounded-[10px] bg-white px-[10px] py-[10px]
         shadow-none
 
+        sm:grid-cols-[minmax(0,1fr)_minmax(0,0.86fr)_auto]
         lg:mx-0 lg:mt-8 lg:max-w-[650px]
         lg:grid-cols-[1fr_1fr_auto]
         lg:gap-3 lg:rounded-xl lg:p-3
@@ -27,7 +28,7 @@ export default function HeroSearchForm() {
       {/* Keyword field */}
       <div
         className="
-          flex h-[23px] min-w-0 items-center
+          flex h-11 min-w-0 items-center
           gap-1.5 rounded-[4px]
           bg-[#f9f9f9] px-[9px]
 
@@ -39,7 +40,7 @@ export default function HeroSearchForm() {
           aria-hidden="true"
           viewBox="0 0 24 24"
           fill="none"
-          className="h-3 w-3 shrink-0 text-heading lg:h-4 lg:w-4"
+          className="h-4 w-4 shrink-0 text-heading"
         >
           <circle
             cx="11"
@@ -68,10 +69,8 @@ export default function HeroSearchForm() {
           placeholder="Job title or Keyword"
           className="
             min-w-0 flex-1 bg-transparent
-            text-[6px] font-medium text-heading
+            text-[12px] font-medium text-heading
             outline-none placeholder:text-heading
-
-            lg:text-xs
           "
         />
       </div>
@@ -87,18 +86,18 @@ export default function HeroSearchForm() {
           placeholder="Location"
           options={locationOptions}
           className="
-            h-[23px] rounded-[4px]
-            pl-6 pr-5 text-[6px]
+            h-11 rounded-[4px]
+            pl-9 pr-8 text-[12px]
 
             lg:h-11 lg:rounded-[10px]
-            lg:pl-10 lg:pr-9 lg:text-xs
+            lg:pl-10 lg:pr-9
           "
           icon={
             <svg
               aria-hidden="true"
               viewBox="0 0 24 24"
               fill="none"
-              className="h-3 w-3 lg:h-4 lg:w-4"
+              className="h-4 w-4"
             >
               <path
                 d="M12 21s6-5.1 6-11a6 6 0 1 0-12 0c0 5.9 6 11 6 11Z"
@@ -123,10 +122,12 @@ export default function HeroSearchForm() {
       <Button
         type="submit"
         className="
-          h-[24px] min-w-[55px]
+          mx-auto
+          h-11 min-w-[92px]
           rounded-[5px] px-2
-          text-[7px]
+          text-[12px]
 
+          sm:mx-0
           lg:h-11 lg:min-w-[100px]
           lg:rounded-[10px] lg:px-7
           lg:text-sm

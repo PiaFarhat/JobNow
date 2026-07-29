@@ -5,7 +5,7 @@ import HeroSearchForm from "@/components/sections/HeroSearchForm";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-hero lg:min-h-[693px]">
+    <section className="relative overflow-hidden bg-hero lg:min-h-[660px] xl:min-h-[693px]">
       {/* Desktop green side panel */}
       <div
         aria-hidden="true"
@@ -22,8 +22,8 @@ export default function Hero() {
 
       {/* Hero text and search content */}
       <Container className="relative">
-        <div className="lg:grid lg:min-h-[693px] lg:grid-cols-[58%_42%] lg:items-start">
-          <div className="pb-10 pt-[98px] text-center lg:pb-0 lg:pt-[195px] lg:text-left">
+        <div className="lg:grid lg:min-h-[660px] lg:grid-cols-[58%_42%] lg:items-start xl:min-h-[693px]">
+          <div className="pb-10 pt-[94px] text-center lg:pb-0 lg:pt-[180px] lg:text-left xl:pt-[195px]">
             <h1
               className="
                 mx-auto max-w-[330px]
@@ -33,8 +33,9 @@ export default function Hero() {
 
                 lg:mx-0
                 lg:max-w-[560px]
-                lg:text-[54px]
+                lg:text-[48px]
                 lg:leading-[1.15]
+                xl:text-[54px]
               "
             >
               Search, Find, &amp; Apply
@@ -43,8 +44,8 @@ export default function Hero() {
             <p
               className="
                 mx-auto mt-[18px]
-                max-w-[280px]
-                text-xs leading-[1.6]
+                max-w-[310px]
+                text-[12px] leading-[1.6]
                 text-body
 
                 lg:mx-0
@@ -63,10 +64,7 @@ export default function Hero() {
           </div>
 
           {/* Empty desktop column occupied visually by green panel */}
-          <div
-            aria-hidden="true"
-            className="hidden min-h-[693px] lg:block"
-          />
+          <div aria-hidden="true" className="hidden min-h-[660px] xl:min-h-[693px] lg:block" />
         </div>
       </Container>
 

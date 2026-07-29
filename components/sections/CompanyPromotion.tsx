@@ -11,18 +11,18 @@ export default function CompanyPromotion() {
         <div
           className="
             grid items-center gap-7
-            lg:grid-cols-2 lg:gap-20
+            lg:grid-cols-[minmax(0,520px)_minmax(0,590px)] lg:justify-between lg:gap-12
           "
         >
           {/* Temporary image placeholder */}
           <div
             aria-hidden="true"
             className="
-              mx-auto h-[210px] w-full
-              max-w-[285px] rounded-[11px]
+              mx-auto aspect-[4/3] w-full
+              max-w-[420px] rounded-[11px]
               bg-[#c9c9c9]
 
-              lg:mx-0 lg:h-auto
+              lg:mx-0
               lg:max-w-[520px] lg:aspect-[4/3]
               lg:rounded-[14px]
             "
@@ -31,7 +31,7 @@ export default function CompanyPromotion() {
           {/* Content */}
           <div
             className="
-              mx-auto w-full max-w-[285px]
+              mx-auto w-full max-w-[420px]
               text-center
 
               lg:mx-0 lg:max-w-[590px]
@@ -40,7 +40,7 @@ export default function CompanyPromotion() {
           >
             <h2
               className="
-                mx-auto max-w-[285px]
+                mx-auto max-w-[380px]
                 text-[22px] font-bold
                 leading-[1.3]
                 tracking-[-0.02em] text-ink
@@ -54,7 +54,7 @@ export default function CompanyPromotion() {
 
             <p
               className="
-                mx-auto mt-3 max-w-[270px]
+                mx-auto mt-3 max-w-[360px]
                 text-xs leading-[1.6]
                 text-body
 

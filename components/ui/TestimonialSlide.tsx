@@ -11,16 +11,16 @@ export default function TestimonialSlide({
     <article
       className="
         grid items-center gap-6
-        lg:grid-cols-[1fr_420px]
-        lg:gap-20
+        lg:grid-cols-[minmax(0,600px)_minmax(320px,420px)]
+        lg:justify-between lg:gap-12
       "
     >
       {/* Using contents changes the mobile element order */}
       <div className="contents lg:block">
         <blockquote
           className="
-            order-1 mx-auto max-w-[285px]
-            text-center text-xs font-semibold
+            order-1 mx-auto max-w-[360px]
+            text-center text-[12px] font-semibold
             leading-[1.55] text-ink
 
             lg:mx-0 lg:max-w-[600px]
@@ -62,10 +62,10 @@ export default function TestimonialSlide({
         aria-hidden="true"
         className="
           order-2 mx-auto
-          h-[185px] w-[188px]
+          aspect-[188/185] w-full max-w-[188px]
           rounded-[8px] bg-brand-500
 
-          lg:order-none lg:h-[410px]
+          lg:order-none lg:aspect-[420/410]
           lg:w-full lg:max-w-[420px]
           lg:rounded-[16px]
         "

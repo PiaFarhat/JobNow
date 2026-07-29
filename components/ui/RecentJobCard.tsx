@@ -148,10 +148,11 @@ export default function RecentJobCard({
   return (
     <article
       className="
-        flex h-[270px] w-full flex-col
+        flex h-[300px] w-full min-w-0 flex-col
         rounded-[10px] bg-white p-4
 
-        lg:h-[510px]
+        sm:h-[330px]
+        lg:h-[460px]
         lg:rounded-[16px] lg:p-8
       "
     >
@@ -159,16 +160,16 @@ export default function RecentJobCard({
 
       <h3
         className="
-          mt-3 text-[14px] font-semibold
+          mt-3 min-w-0 text-[14px] font-semibold
           leading-tight text-ink
 
-          lg:mt-6 lg:text-[22px]
+          lg:mt-6 lg:text-[20px]
         "
       >
         {job.title}
       </h3>
 
-      <p className="mt-1 text-xs text-body lg:mt-2 lg:text-sm">
+      <p className="mt-1 min-w-0 text-xs text-body lg:mt-2 lg:text-sm">
         {job.company}
       </p>
 
@@ -184,10 +185,10 @@ export default function RecentJobCard({
         {job.description}
       </p>
 
-      <div className="mt-3 flex items-center gap-1.5 lg:mt-6 lg:gap-3">
+      <div className="mt-3 flex min-w-0 flex-wrap items-center gap-1.5 lg:mt-6 lg:gap-3">
         <span
           className="
-            inline-flex h-6 items-center gap-1
+            inline-flex h-6 min-w-0 items-center gap-1
             rounded-full bg-[#f9f9f9]
             px-1.5 text-[10px] text-ink
 
@@ -200,7 +201,7 @@ export default function RecentJobCard({
 
         <span
           className="
-            inline-flex h-6 items-center gap-1
+            inline-flex h-6 min-w-0 items-center gap-1
             rounded-full bg-[#f9f9f9]
             px-1.5 text-[10px] text-ink
 
@@ -214,6 +215,7 @@ export default function RecentJobCard({
 
       <button
         type="button"
+        onPointerDown={(event) => event.stopPropagation()}
         className="
           group mt-auto inline-flex w-fit
           cursor-pointer items-center gap-1.5

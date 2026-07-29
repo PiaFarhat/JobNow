@@ -14,20 +14,29 @@ export default function HowItWorksCard({
   return (
     <article
       className="
-        h-[145px] rounded-[10px] bg-white
-        px-4 py-4
-        sm:h-auto sm:min-h-[175px]
-        sm:rounded-[12px] sm:px-6 sm:py-6
+        group h-full cursor-default
+        rounded-[10px] border border-transparent
+        bg-white p-3
+
+        transition-[transform,box-shadow,border-color,background-color]
+        duration-300 ease-out
+
+        hover:-translate-y-1
+        hover:border-brand-500/20
+        hover:bg-brand-500/[0.025]
+        hover:shadow-[0_12px_30px_rgba(0,68,56,0.08)]
+
+        sm:p-5
+        lg:min-h-[220px]
+        lg:rounded-[12px]
+        lg:p-8
       "
     >
       <div
-        aria-hidden="true"
         className="
-          flex h-6 w-6 items-center justify-center
-          text-brand-500
-          [&_svg]:h-6 [&_svg]:w-6
-          sm:h-10 sm:w-10
-          sm:[&_svg]:h-8 sm:[&_svg]:w-8
+          inline-flex text-brand-500
+          transition-transform duration-300 ease-out
+          group-hover:-translate-y-0.5
         "
       >
         {icon}
@@ -35,9 +44,12 @@ export default function HowItWorksCard({
 
       <h3
         className="
-          mt-3 text-[11px] font-semibold
+          mt-4 text-[12px] font-semibold
           leading-tight text-ink
-          sm:mt-4 sm:text-base
+
+          sm:text-sm
+          lg:mt-6
+          lg:text-[17px]
         "
       >
         {title}
@@ -45,10 +57,13 @@ export default function HowItWorksCard({
 
       <p
         className="
-          mt-2 line-clamp-3
-          text-[7px] leading-[1.55] text-body
-          sm:mt-3 sm:line-clamp-none
-          sm:text-[11px] sm:leading-[1.6]
+          mt-2 text-[10px]
+          leading-[1.55] text-body
+
+          sm:text-[12px]
+          lg:mt-3
+          lg:text-sm
+          lg:leading-6
         "
       >
         {description}

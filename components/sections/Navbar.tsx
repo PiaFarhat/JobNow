@@ -53,7 +53,7 @@ export default function Navbar() {
       <Container>
         <nav
           aria-label="Main navigation"
-          className="relative flex h-[83px] items-center justify-between md:h-20"
+          className="relative flex h-[72px] min-w-0 items-center justify-between md:h-20"
         >
           {/* Logo */}
           <Link
@@ -74,13 +74,13 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop navigation */}
-          <div className="hidden items-center gap-8 md:flex">
+          <div className="hidden min-w-0 items-center gap-5 md:flex lg:gap-8">
             {navigationLinks.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
                 className="
-                  text-sm font-medium text-heading
+                  whitespace-nowrap text-sm font-medium text-heading
                   transition-colors hover:text-brand-500
                   focus-visible:outline-none
                   focus-visible:ring-2
@@ -94,11 +94,11 @@ export default function Navbar() {
           </div>
 
           {/* Desktop account actions */}
-          <div className="hidden items-center gap-5 md:flex">
+          <div className="hidden shrink-0 items-center gap-4 md:flex lg:gap-5">
             <Link
               href="#sign-in"
               className={`
-                text-sm font-medium transition-colors
+                whitespace-nowrap text-sm font-medium transition-colors
                 focus-visible:outline-none
                 focus-visible:ring-2
                 focus-visible:ring-brand-500
@@ -106,7 +106,7 @@ export default function Navbar() {
                 ${
                   isScrolled
                     ? "text-ink hover:text-brand-500"
-                    : "text-white hover:text-white/75"
+                    : "text-ink hover:text-brand-500 lg:text-white lg:hover:text-white/75"
                 }
               `}
             >
@@ -114,49 +114,53 @@ export default function Navbar() {
             </Link>
 
             <Link
-              href="#create-account"
-              className={`
-                inline-flex h-10 items-center gap-2
-                rounded-md px-4 text-sm font-semibold
-                cursor-pointer shadow-sm
-                transition-all duration-300 ease-out
-                hover:-translate-y-0.5 hover:scale-[1.01]
-                active:translate-y-0 active:scale-[0.99]
-                focus-visible:outline-none
-                focus-visible:ring-2
-                focus-visible:ring-brand-500
-                focus-visible:ring-offset-2
-                ${
-                  isScrolled
-                    ? "bg-brand-500 text-white hover:bg-brand-600"
-                    : "bg-white text-heading hover:bg-brand-50"
-                }
-              `}
-            >
-              <svg
-                aria-hidden="true"
-                viewBox="0 0 20 20"
-                fill="none"
-                className="h-4 w-4"
-              >
-                <path
-                  d="M7.5 4.5H4.75A1.75 1.75 0 0 0 3 6.25v9A1.75 1.75 0 0 0 4.75 17h9a1.75 1.75 0 0 0 1.75-1.75V12.5"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                />
+  href="/register"
+  className="
+    group inline-flex min-h-11 items-center gap-2
+    whitespace-nowrap rounded-[7px] bg-white px-4 py-3
+    text-sm font-semibold text-ink
+    transition-all duration-300
+    hover:-translate-y-0.5
+    hover:shadow-md
+  "
+>
+  <svg
+    aria-hidden="true"
+    viewBox="0 0 24 24"
+    fill="none"
+    className="
+      h-5 w-5
+      transition-transform duration-300 ease-out
+      group-hover:-translate-y-1
+      group-hover:translate-x-1
+    "
+  >
+    <path
+      d="M14 5H19V10"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
 
-                <path
-                  d="M11 3h6v6M16.5 3.5 9 11"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+    <path
+      d="M19 5L11 13"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+    />
 
-              Create Account
-            </Link>
+    <path
+      d="M19 13V18C19 18.5523 18.5523 19 18 19H6C5.44772 19 5 18.5523 5 18V6C5 5.44772 5.44772 5 6 5H11"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+
+  <span>Create Account</span>
+</Link>
           </div>
 
           {/* Mobile menu button */}
@@ -208,8 +212,8 @@ export default function Navbar() {
           <div
             id="mobile-navigation"
             className="
-              mb-4 rounded-xl border border-border
-              bg-white p-5 shadow-lg md:hidden
+              mb-4 max-h-[calc(100vh-88px)] overflow-y-auto rounded-xl border border-border
+              bg-white p-4 shadow-lg sm:p-5 md:hidden
             "
           >
             <div className="flex flex-col gap-1">

@@ -48,16 +48,13 @@ export default function RecentJobs() {
         Swipe to explore more jobs
       </p>
 
-      {/*
-        Starts at the Container grid line but extends to the right edge.
-        Swiper overflow stays visible so cards can move outside the grid.
-      */}
       <Container className="mt-3 sm:mt-8 lg:mt-12">
-        <div className="w-[calc(50vw+50%)]">
+        <div className="w-[calc(100vw-1.25rem)] sm:w-[calc(100vw-2rem)] lg:w-[calc(100vw-2.5rem)] xl:w-[calc(100vw-((100vw-1240px)/2))]">
           <Swiper
             modules={[FreeMode, Pagination]}
             slidesPerView="auto"
             spaceBetween={14}
+            slidesOffsetAfter={40}
             grabCursor
             watchOverflow={false}
             freeMode={{
@@ -72,9 +69,15 @@ export default function RecentJobs() {
             breakpoints={{
               640: {
                 spaceBetween: 18,
+                slidesOffsetAfter: 56,
               },
               1024: {
                 spaceBetween: 28,
+                slidesOffsetAfter: 96,
+              },
+              1536: {
+                spaceBetween: 28,
+                slidesOffsetAfter: 160,
               },
             }}
             aria-label="Recently added jobs"
@@ -83,7 +86,7 @@ export default function RecentJobs() {
             {recentlyAddedJobs.map((job) => (
               <SwiperSlide
                 key={job.id}
-                className="!h-auto !w-[168px] lg:!w-[446px]"
+                className="!h-auto !w-[min(76vw,270px)] sm:!w-[300px] md:!w-[340px] lg:!w-[360px] xl:!w-[390px] 2xl:!w-[410px]"
               >
                 <RecentJobCard job={job} />
               </SwiperSlide>
