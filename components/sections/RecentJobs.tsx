@@ -1,11 +1,10 @@
 "use client";
 
-import { FreeMode, Pagination } from "swiper/modules";
+import { FreeMode } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/free-mode";
-import "swiper/css/pagination";
 
 import Container from "@/components/layout/Container";
 import Button from "@/components/ui/Button";
@@ -43,15 +42,10 @@ export default function RecentJobs() {
         </div>
       </Container>
 
-      {/* Mobile interaction hint */}
-      <p className="mt-5 text-center text-[11px] text-body sm:hidden">
-        Swipe to explore more jobs
-      </p>
-
-      <Container className="mt-3 sm:mt-8 lg:mt-12">
+      <Container className="mt-8 lg:mt-12">
         <div className="w-[calc(100vw-1.25rem)] sm:w-[calc(100vw-2rem)] lg:w-[calc(100vw-2.5rem)] xl:w-[calc(100vw-((100vw-1240px)/2))]">
           <Swiper
-            modules={[FreeMode, Pagination]}
+            modules={[FreeMode]}
             slidesPerView="auto"
             spaceBetween={14}
             slidesOffsetAfter={40}
@@ -61,10 +55,6 @@ export default function RecentJobs() {
               enabled: true,
               momentum: true,
               momentumRatio: 0.8,
-            }}
-            pagination={{
-              clickable: true,
-              dynamicBullets: true,
             }}
             breakpoints={{
               640: {
@@ -81,7 +71,7 @@ export default function RecentJobs() {
               },
             }}
             aria-label="Recently added jobs"
-            className="recent-jobs-swiper !overflow-visible !pb-10"
+            className="recent-jobs-swiper !overflow-visible"
           >
             {recentlyAddedJobs.map((job) => (
               <SwiperSlide

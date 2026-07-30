@@ -23,10 +23,9 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="overflow-hidden bg-[#fbfbfb] py-16 lg:py-24"
+      className="overflow-hidden bg-[#fbfbfb] pb-12 pt-14 lg:py-24"
     >
       <Container>
-        {/* Section heading */}
         <div className="text-center lg:text-left">
           <h2
             className="
@@ -34,24 +33,10 @@ export default function Testimonials() {
               lg:text-[32px]
             "
           >
-            People’s Feedback about JobNow!
+            People&apos;s Feedback about JobNow!
           </h2>
-
-          <p
-            className="
-              mx-auto mt-3 max-w-[285px]
-              text-xs leading-[1.6] text-body
-
-              lg:mx-0 lg:mt-5 lg:max-w-[620px]
-              lg:text-sm lg:leading-7
-            "
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis
-            lacus non orci euismod vestibulum vitae ut ex.
-          </p>
         </div>
 
-        {/* Testimonial carousel */}
         <div className="relative mt-8 lg:mt-12">
           <Swiper
             slidesPerView={1}
@@ -70,7 +55,6 @@ export default function Testimonials() {
             ))}
           </Swiper>
 
-          {/* Navigation controls */}
           <div
             className="
               mt-5 flex items-center justify-center gap-3
@@ -88,9 +72,12 @@ export default function Testimonials() {
                 inline-flex h-9 w-9 cursor-pointer
                 items-center justify-center
                 rounded-full bg-[#d9d9d9] text-white
-                transition-all duration-300
-                hover:-translate-y-0.5
+                transition-colors duration-300
                 hover:bg-brand-500
+                focus-visible:outline-none
+                focus-visible:ring-2
+                focus-visible:ring-brand-500
+                focus-visible:ring-offset-2
 
                 lg:h-12 lg:w-12
               "
@@ -119,9 +106,12 @@ export default function Testimonials() {
                 inline-flex h-9 w-9 cursor-pointer
                 items-center justify-center
                 rounded-full bg-[#d9d9d9] text-white
-                transition-all duration-300
-                hover:-translate-y-0.5
+                transition-colors duration-300
                 hover:bg-brand-500
+                focus-visible:outline-none
+                focus-visible:ring-2
+                focus-visible:ring-brand-500
+                focus-visible:ring-offset-2
 
                 lg:h-12 lg:w-12
               "

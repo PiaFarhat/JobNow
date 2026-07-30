@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
@@ -9,6 +10,8 @@ import JobCategoryCard from "@/components/ui/JobCategoryCard";
 import { jobCategories } from "@/data/categories";
 
 export default function JobCategories() {
+  const [activeCategoryId, setActiveCategoryId] = useState<number | null>(null);
+
   return (
     <section
       id="job-categories"
@@ -53,7 +56,7 @@ export default function JobCategories() {
   }}
   className="!overflow-visible"
 >
-    {jobCategories.map((category, index) => (
+    {jobCategories.map((category) => (
       <SwiperSlide
         key={category.id}
         className="!w-[clamp(132px,42vw,168px)] sm:!w-[190px] md:!w-[220px] lg:!w-[250px] xl:!w-[285px]"
@@ -62,7 +65,8 @@ export default function JobCategories() {
           title={category.title}
           vacancies={category.vacancies}
           icon={category.icon}
-          active={index === 0}
+          active={activeCategoryId === category.id}
+          onSelect={() => setActiveCategoryId(category.id)}
         />
       </SwiperSlide>
     ))}

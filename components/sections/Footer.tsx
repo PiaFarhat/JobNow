@@ -4,19 +4,19 @@ import Container from "@/components/layout/Container";
 
 const pageLinks = [
   { label: "Home", href: "/" },
-  { label: "Booking", href: "/booking" },
-  { label: "Facilities", href: "/facilities" },
-  { label: "About Us", href: "/about" },
-  { label: "Location", href: "/location" },
-  { label: "Contact", href: "/contact" },
+  { label: "Jobs", href: "/#jobs" },
+  { label: "How It Works", href: "/#how-it-works" },
+  { label: "Categories", href: "/#job-categories" },
+  { label: "Testimonials", href: "/#testimonials" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 const socialLinkClassName = `
   inline-flex h-8 w-8 items-center justify-center
-  rounded-full text-white
-  transition-all duration-300
-  hover:-translate-y-0.5
+  rounded-full text-white/90
+  transition-colors duration-300
   hover:bg-white/15
+  hover:text-white
   focus-visible:outline-none
   focus-visible:ring-2
   focus-visible:ring-white
@@ -89,11 +89,11 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="group inline-flex items-center gap-2 text-sm text-white/90 transition-colors duration-300 hover:text-white focus-visible:outline-none focus-visible:underline"
+                    className="group inline-flex items-center gap-2 text-sm text-white/90 transition-colors duration-300 hover:text-white hover:underline focus-visible:outline-none focus-visible:underline"
                   >
                     <span
                       aria-hidden="true"
-                      className="transition-transform duration-300 group-hover:translate-x-1"
+                      className="transition-transform duration-300 group-hover:translate-x-0.5"
                     >
                       &gt;
                     </span>
@@ -143,7 +143,7 @@ export default function Footer() {
                   className="block h-5 w-5"
                   fill="currentColor"
                 >
-                  <path d="M13.6 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H7.4V13h2.8v8h3.4Z" />
+                  <path d="M14 8.2V6.7c0-.7.2-1.1 1.2-1.1h1.3V3.2c-.6-.1-1.3-.2-2-.2-2.2 0-3.7 1.3-3.7 3.6v1.6H8.3V11h2.5v10H14V11h2.5l.4-2.8H14Z" />
                 </svg>
               </a>
 

@@ -73,7 +73,7 @@ export default function Hero() {
         className="
           relative h-[230px] w-full
           overflow-hidden
-          rounded-t-[28px]
+          rounded-none
           bg-brand-500
           lg:hidden
         "

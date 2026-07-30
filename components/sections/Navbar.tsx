@@ -120,8 +120,11 @@ export default function Navbar() {
     whitespace-nowrap rounded-[7px] bg-white px-4 py-3
     text-sm font-semibold text-ink
     transition-all duration-300
-    hover:-translate-y-0.5
     hover:shadow-md
+    focus-visible:outline-none
+    focus-visible:ring-2
+    focus-visible:ring-brand-500
+    focus-visible:ring-offset-2
   "
 >
   <svg
@@ -131,8 +134,8 @@ export default function Navbar() {
     className="
       h-5 w-5
       transition-transform duration-300 ease-out
-      group-hover:-translate-y-1
-      group-hover:translate-x-1
+      motion-safe:group-hover:-translate-y-0.5
+      motion-safe:group-hover:translate-x-0.5
     "
   >
     <path

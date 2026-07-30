@@ -3,7 +3,7 @@ import Container from "@/components/layout/Container";
 
 export default function RegisterCta() {
   return (
-    <section className="relative bg-[#fbfbfb] pt-16 lg:pt-24">
+    <section className="relative bg-[#fbfbfb] pt-10 lg:pt-24">
       {/* Green footer overlap behind the CTA */}
       <div
         aria-hidden="true"
@@ -18,7 +18,7 @@ export default function RegisterCta() {
         <div
           className="
             mx-auto flex min-h-[148px] w-full
-            max-w-[420px] flex-col
+            flex-col
             items-center justify-center
             rounded-[6px] bg-[#004438]
             px-5 py-6 text-center

@@ -15,7 +15,6 @@ export default function TestimonialSlide({
         lg:justify-between lg:gap-12
       "
     >
-      {/* Using contents changes the mobile element order */}
       <div className="contents lg:block">
         <blockquote
           className="
@@ -28,7 +27,7 @@ export default function TestimonialSlide({
             lg:leading-[1.45]
           "
         >
-          “{testimonial.quote}”
+          &quot;{testimonial.quote}&quot;
         </blockquote>
 
         <div
@@ -57,7 +56,6 @@ export default function TestimonialSlide({
         </div>
       </div>
 
-      {/* Temporary XD image placeholder */}
       <div
         aria-hidden="true"
         className="

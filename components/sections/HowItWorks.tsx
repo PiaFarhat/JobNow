@@ -154,7 +154,7 @@ export default function HowItWorks() {
   return (
     <section
       id="how-it-works"
-      className="bg-[#fbfbfb] py-16 lg:py-24"
+      className="bg-[#fbfbfb] py-14 lg:py-24"
     >
       <Container>
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between md:gap-8">
@@ -183,7 +183,7 @@ export default function HowItWorks() {
 
         <div
           className="
-            mt-8 grid w-full
+            mt-7 grid w-full
             grid-cols-2 items-stretch gap-x-[15px] gap-y-4
             sm:gap-5
             md:grid-cols-4
@@ -201,7 +201,7 @@ export default function HowItWorks() {
         </div>
 
         {/* Mobile button */}
-     <div className="mt-6 flex justify-center md:hidden">
+     <div className="mt-5 flex justify-center md:hidden">
   <Button
     variant="outline"
     size="compact"

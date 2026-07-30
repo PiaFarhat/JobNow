@@ -5,12 +5,12 @@ export default function CompanyPromotion() {
   return (
     <section
       id="company-promotion"
-      className="bg-[#fbfbfb] py-12 lg:py-24"
+      className="bg-[#fbfbfb] py-10 lg:py-24"
     >
       <Container>
         <div
           className="
-            grid items-center gap-7
+            grid items-center gap-5
             lg:grid-cols-[minmax(0,520px)_minmax(0,590px)] lg:justify-between lg:gap-12
           "
         >
@@ -31,7 +31,7 @@ export default function CompanyPromotion() {
           {/* Content */}
           <div
             className="
-              mx-auto w-full max-w-[420px]
+              mx-auto w-full
               text-center
 
               lg:mx-0 lg:max-w-[590px]
@@ -40,7 +40,7 @@ export default function CompanyPromotion() {
           >
             <h2
               className="
-                mx-auto max-w-[380px]
+                mx-auto max-w-[430px]
                 text-[22px] font-bold
                 leading-[1.3]
                 tracking-[-0.02em] text-ink
@@ -54,7 +54,7 @@ export default function CompanyPromotion() {
 
             <p
               className="
-                mx-auto mt-3 max-w-[360px]
+                mx-auto mt-3 max-w-[430px]
                 text-xs leading-[1.6]
                 text-body
 

@@ -148,10 +148,10 @@ export default function RecentJobCard({
   return (
     <article
       className="
-        flex h-[300px] w-full min-w-0 flex-col
+        flex h-full min-h-[250px] w-full min-w-0 flex-col
         rounded-[10px] bg-white p-4
 
-        sm:h-[330px]
+        sm:min-h-[300px]
         lg:h-[460px]
         lg:rounded-[16px] lg:p-8
       "
@@ -217,14 +217,14 @@ export default function RecentJobCard({
         type="button"
         onPointerDown={(event) => event.stopPropagation()}
         className="
-          group mt-auto inline-flex w-fit
+          group mt-6 inline-flex w-fit
           cursor-pointer items-center gap-1.5
           text-xs font-semibold
           text-brand-500
           transition-colors duration-300
           hover:text-brand-700
 
-          lg:gap-2 lg:text-base
+          lg:mt-auto lg:gap-2 lg:text-base
         "
       >
         Apply Now

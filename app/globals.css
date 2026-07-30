@@ -91,22 +91,3 @@ button:disabled,
     transition-duration: 0.01ms !important;
   }
 }
-.recent-jobs-swiper .swiper-pagination {
-  bottom: 4px;
-}
-
-.recent-jobs-swiper .swiper-pagination-bullet {
-  width: 7px;
-  height: 7px;
-  background: #cbd5d1;
-  opacity: 1;
-  transition:
-    width 250ms ease,
-    background-color 250ms ease;
-}
-
-.recent-jobs-swiper .swiper-pagination-bullet-active {
-  width: 20px;
-  border-radius: 999px;
-  background: #00cc99;
-}
