@@ -154,7 +154,7 @@ export default function HowItWorks() {
   return (
     <section
       id="how-it-works"
-      className="bg-[#fbfbfb] py-14 lg:py-24"
+      className="bg-[#fbfbfb] py-10 lg:py-24"
     >
       <Container>
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between md:gap-8">
@@ -163,7 +163,7 @@ export default function HowItWorks() {
               How it works
             </h2>
 
-            <p className="mt-5 max-w-[680px] text-sm leading-7 text-body">
+            <p className="mt-3 max-w-[680px] text-sm leading-7 text-body lg:mt-5">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis
               lacus non orci euismod vestibulum vitae ut ex. Quisque ut arcu at
               lectus tristique auctor sit amet at turpis.
@@ -183,11 +183,12 @@ export default function HowItWorks() {
 
         <div
           className="
-            mt-7 grid w-full
-            grid-cols-2 items-stretch gap-x-[15px] gap-y-4
-            sm:gap-5
+            mt-6 grid w-full min-w-0 max-w-none
+            grid-cols-1 items-stretch gap-3
+            min-[360px]:grid-cols-2
+            sm:gap-4
             md:grid-cols-4
-            lg:mt-12 lg:grid-cols-4
+            lg:mt-12 lg:grid-cols-4 lg:gap-5
           "
         >
           {steps.map((step) => (

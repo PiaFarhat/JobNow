@@ -14,19 +14,18 @@ export default function HowItWorksCard({
   return (
     <article
       className="
-        group h-full cursor-default
+        group h-full w-full min-w-0 cursor-default
         rounded-[10px] border border-transparent
-        bg-white p-3
+        bg-white p-4
 
         transition-[transform,box-shadow,border-color,background-color]
-        duration-300 ease-out
+        duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
 
-        hover:-translate-y-1
-        hover:border-brand-500/20
+        hover:-translate-y-0.5
+        hover:border-brand-500/15
         hover:bg-brand-500/[0.025]
-        hover:shadow-[0_12px_30px_rgba(0,68,56,0.08)]
+        hover:shadow-[0_10px_24px_rgba(0,68,56,0.06)]
 
-        sm:p-5
         lg:min-h-[220px]
         lg:rounded-[12px]
         lg:p-8
@@ -35,8 +34,8 @@ export default function HowItWorksCard({
       <div
         className="
           inline-flex text-brand-500
-          transition-transform duration-300 ease-out
-          group-hover:-translate-y-0.5
+          transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
+          group-hover:-translate-y-px
         "
       >
         {icon}
@@ -44,7 +43,7 @@ export default function HowItWorksCard({
 
       <h3
         className="
-          mt-4 text-[12px] font-semibold
+          mt-3 text-[12px] font-semibold
           leading-tight text-ink
 
           sm:text-sm
