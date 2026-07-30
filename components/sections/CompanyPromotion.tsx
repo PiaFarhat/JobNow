@@ -5,14 +5,14 @@ export default function CompanyPromotion() {
   return (
     <section
       id="company-promotion"
-      className="bg-[#fbfbfb] pb-10 pt-0 lg:py-24"
+      className="bg-[#fbfbfb] pb-6 pt-0 min-[820px]:py-16 lg:py-24"
     >
       <Container>
         <div
           className="
             grid grid-cols-1 items-center gap-5
-            min-[900px]:grid-cols-[minmax(0,460px)_minmax(0,1fr)]
-            min-[900px]:justify-between min-[900px]:gap-10
+            min-[820px]:grid-cols-[minmax(0,400px)_minmax(0,1fr)]
+            min-[820px]:justify-between min-[820px]:gap-10
             lg:grid-cols-[minmax(0,520px)_minmax(0,590px)] lg:gap-12
           "
         >
@@ -24,7 +24,7 @@ export default function CompanyPromotion() {
               max-w-[420px] rounded-[11px]
               bg-[#c9c9c9]
 
-              min-[900px]:mx-0 min-[900px]:max-w-[460px]
+              min-[820px]:mx-0 min-[820px]:max-w-[400px]
               lg:max-w-[520px] lg:aspect-[4/3]
               lg:rounded-[14px]
             "
@@ -36,8 +36,8 @@ export default function CompanyPromotion() {
               mx-auto w-full min-w-0
               text-center
 
-              min-[900px]:mx-0 min-[900px]:max-w-none
-              min-[900px]:text-left
+              min-[820px]:mx-0 min-[820px]:max-w-none
+              min-[820px]:text-left
               lg:max-w-[590px]
               lg:text-left
             "
@@ -49,7 +49,7 @@ export default function CompanyPromotion() {
                 leading-[1.3]
                 tracking-[-0.02em] text-ink
 
-                min-[900px]:mx-0 min-[900px]:max-w-none
+                min-[820px]:mx-0 min-[820px]:max-w-none
                 lg:text-[36px] lg:leading-[1.35]
               "
             >
@@ -62,7 +62,7 @@ export default function CompanyPromotion() {
                 text-xs leading-[1.6]
                 text-body
 
-                min-[900px]:mx-0 min-[900px]:max-w-none
+                min-[820px]:mx-0 min-[820px]:max-w-none
                 lg:mt-5
                 lg:max-w-none lg:text-sm
                 lg:leading-7
@@ -75,15 +75,12 @@ export default function CompanyPromotion() {
 
             <Button
               variant="outline"
-              size="compact"
+              size="learnMore"
               className="
                 mx-auto mt-4
 
-                min-[900px]:mx-0
+                min-[820px]:mx-0
                 lg:mt-6
-                lg:h-10 lg:min-w-[125px]
-                lg:rounded-[7px]
-                lg:px-5 lg:text-sm
               "
             >
               Learn More

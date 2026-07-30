@@ -172,10 +172,7 @@ export default function HowItWorks() {
 
           {/* Desktop and tablet button */}
           <div className="hidden md:block">
-  <Button
-    variant="outline"
-    className="min-w-[145px] rounded-[8px] bg-white"
-  >
+  <Button variant="outline" size="learnMore">
     Learn More
   </Button>
 </div>
@@ -184,8 +181,7 @@ export default function HowItWorks() {
         <div
           className="
             mt-6 grid w-full min-w-0 max-w-none
-            grid-cols-1 items-stretch gap-3
-            min-[360px]:grid-cols-2
+            grid-cols-2 items-stretch gap-3
             sm:gap-4
             md:grid-cols-4
             lg:mt-12 lg:grid-cols-4 lg:gap-5
@@ -205,7 +201,7 @@ export default function HowItWorks() {
      <div className="mt-5 flex justify-center md:hidden">
   <Button
     variant="outline"
-    size="compact"
+    size="learnMore"
   >
     Learn More
   </Button>

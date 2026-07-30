@@ -1,7 +1,7 @@
 import type { ButtonHTMLAttributes, ReactNode } from "react";
 
 type ButtonVariant = "primary" | "outline" | "ghost";
-type ButtonSize = "default" | "compact" | "tiny";
+type ButtonSize = "default" | "compact" | "tiny" | "learnMore";
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   children: ReactNode;
@@ -41,6 +41,7 @@ const sizeStyles: Record<ButtonSize, string> = {
   default: "h-10 w-fit rounded-[7px] px-5 text-sm",
   compact: "h-9 min-w-[96px] w-fit rounded-[6px] px-4 text-xs",
   tiny: "h-8 min-w-[92px] w-fit rounded-[5px] px-3 text-[11px]",
+  learnMore: "h-10 min-w-[128px] w-fit rounded-[7px] px-6 text-xs",
 };
 
 export default function Button({

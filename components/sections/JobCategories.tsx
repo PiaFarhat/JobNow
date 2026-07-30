@@ -15,7 +15,7 @@ export default function JobCategories() {
   return (
     <section
       id="job-categories"
-      className="overflow-hidden bg-[#effaf7] py-7 lg:py-24"
+      className="overflow-hidden bg-[#effaf7] pb-7 pt-6 lg:py-24"
     >
       {/* Section heading */}
       <Container>
